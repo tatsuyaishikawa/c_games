@@ -1,0 +1,5 @@
+ #define MAIN_FRAME "main_frame.txt"
+ #define CARRE_BLOC "carre_bloc.txt"
+ #define LEFT_BLOC  "left_bloc.txt"
+ #define RIGHT_BLOC "right_bloc.txt"
+ #define LONG_BLOC  "long_bloc.txt"

@@ -1,0 +1,79 @@
+ 5.10.2014  40m + 8h
+1.
+部品を読み込む際、
+ファイルを何度も開くのと
+バッファに部品の形を配列として格納して
+おくのとどちらが効率が良いか？
+
+
+2.×
+ (ren.c)
+メインフレームはstdoutだと指定した位置に書き込み不可能なため
+一度バッファにかくのうしてから
+fread()を用いてmain_frameファイルから二次元配列のデータをバッファ
+に読み込む
+
+/二次元配列データをストリームから読み込むことができない（一次で終わる）
+
+3.
+ブロックを落下させる
+ブロックを回転させる
+
+/(ren_bloc.c) 
+ ランダムにブロックを選択する、移動の跡を消去する処理を関数にまとめる
+
+/*凸凹ブロックを描くためのアルゴリズム*/
+case 3:
+        /* bloc droite */
+    /*
+         for(y=10+county;y<13+county;y++){
+          for(x=11;x<13;x++){
+           if(x==12 &&  ){
+           sotowaku[y][x]='*';
+           } else{
+           sotowaku=' ';
+           }
+          }
+         }
+        */
+  case 4:
+        /* bloc gauche */
+        /*
+         for(y=10+county;y<14+county;y++){
+          for(x=11;x<12;x++){
+           sotowaku[y][x]='*';
+          }
+         }
+        */
+
+
+
+
+
+
+
+
+
+4.ゲームオーバー判定
+f(sotowaku[y][x]=='*'){
+     printf("%d %d \n",y,x);
+     out_count++;
+    }
+    if(out_count>100){
+     printf("%d\n",out_count);
+     printf("gameover\n");
+     exit(1);
+    }
+   }
+  }
+
+	1.verifier chaque clonne, apres l'affichage.
+ (si le nombre de '*' atteint le hauteur de mainframe, le joueur est perdu )
+	2.verifier le nombre total de '*'
+(
+
+ 5. ブロックの移動
+
+	１．シグナルで呼び出した関数に変数が渡せてない
+	 /utilisation de variables globales 
+	２．移動跡を消すアルゴリズムが×

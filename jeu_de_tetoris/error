@@ -1,0 +1,29 @@
+In file included from /usr/include/signal.h:57:0,
+                 from ren_bloc.c:4:
+ren_bloc.c:11:9: error: expected declaration specifiers or ‘...’ before numeric constant
+  signal(SIGINT,(void *)left());
+         ^
+ren_bloc.c:11:16: error: expected declaration specifiers or ‘...’ before ‘(’ token
+  signal(SIGINT,(void *)left());
+                ^
+In file included from /usr/include/signal.h:57:0,
+                 from ren_bloc.c:4:
+ren_bloc.c:13:9: error: expected declaration specifiers or ‘...’ before numeric constant
+  signal(SIGTERM,(void *)right());
+         ^
+ren_bloc.c:13:17: error: expected declaration specifiers or ‘...’ before ‘(’ token
+  signal(SIGTERM,(void *)right());
+                 ^
+ren_bloc.c: In function ‘down_bloc’:
+ren_bloc.c:92:2: error: too few arguments to function ‘left’
+  signal(SIGINT,(void *)left());
+  ^
+ren_bloc.c:8:7: note: declared here
+  void left(char sotowaku[][23],int,int);
+       ^
+ren_bloc.c:94:2: error: too few arguments to function ‘right’
+  signal(SIGTERM,(void *)right());
+  ^
+ren_bloc.c:9:7: note: declared here
+  void right(char sotowaku[][23],int,int);
+       ^
